@@ -1,5 +1,8 @@
 <!DOCTYPE html>
 <html lang="sv">
+<script src = 
+"https://ajax.googleapis.com/ajax/libs/jquery/3.4.0/jquery.min.js"> 
+        </script> 
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -34,9 +37,25 @@
 </head>
 
 <body>
+  
       
 
         <span class="badge badge-primary">Primary</span>
+        <span style = "color:green;" >  
+        
+        </h1>  
+          
+        <p id = "GFG_UP" style =  
+            "font-size: 16px; font-weight: bold;">      
+        </p> 
+          
+        <button>  
+            Change color
+        </button> 
+          
+        <p id = "GFG_DOWN" style =  
+            "color:black; font-size: 20px; font-weight: bold;"> 
+        </p> 
         <span class="badge badge-secondary">Secondary</span>
         <span class="badge badge-success">Success</span>
         <span class="badge badge-danger">Danger</span>
@@ -49,13 +68,16 @@
 <div class="card mb-3" style="max-width: 540px;">
     <div class="row no-gutters">
       <div class="col-md-4">
-        <img src="../img/Tonttu.gif" class="..." alt="...">
+        <img src="../img/Tonttu.gif" class="..." >
       </div>
       <div class="col-md-8">
         <div class="card-body">
           <h5 class="card-title"><?= $row['name']?></h5> </br> <?= $row['created_at']?> <?= $row['updated_at']?>
-          <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
+          <a href="tweet.php?id=<?=$row['id']?>">
+           <p class="card-text"><?=$row['body']?></p>
+          </a>
           <p class="card-text"><small class="text-muted">Last updated 3 mins ago</small></p>
+
         </div>
       </div>
     </div>
@@ -70,7 +92,11 @@
 
 </div>
 
-
+<script> 
+            $('button').on('click', function() { 
+                $('body').css('background', '#FFC0CB');  
+            });  
+        </script>  
 
 
 
