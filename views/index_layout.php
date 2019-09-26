@@ -1,3 +1,5 @@
+
+<?php include'navbar.php'?>
 <?php include 'head.php' ?>
     <div class="container px-5">
     <?php 
